@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAYNROZ — Проекты</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #0a0a0f;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* ШАПКА */
+        header {
+            background: linear-gradient(180deg, #1a1a2e 0%, #0a0a0f 100%);
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .logo {
+            font-size: 80px;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        h1 {
+            font-size: 60px;
+            background: linear-gradient(45deg, #e94560, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 20px;
+        }
+
+        /* НАВИГАЦИЯ */
+        nav {
+            background: #151515;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #e94560;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: #e94560;
+            color: #fff;
+        }
+
+        /* КОНТЕЙНЕР */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #e94560;
+            font-size: 36px;
+            margin-bottom: 30px;
+            border-left: 5px solid #ffd700;
+            padding-left: 15px;
+        }
+
+        /* КАРТОЧКИ ПРОЕКТОВ */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #151515;
+            border: 2px solid #1a1a2e;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project:hover {
+            border-color: #e94560;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(233, 69, 96, 0.3);
+        }
+
+        .project-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            color: #ffd700;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #aaa;
+            font-size: 15px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project .tags {
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #1a1a2e;
+            color: #e94560;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .project a {
+            display: block;
+            background: #e94560;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .project a:hover {
+            background: #ffd700;
+            color: #000;
+        }
+
+        /* ФУТЕР */
+        footer {
+            background: #0a0a0f;
+            border-top: 2px solid #1a1a2e;
+            padding: 40px 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        footer .final {
+            color: #e94560;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 40px; }
+            .logo { font-size: 60px; }
+            nav a { display: block; margin: 5px 0; }
+            h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌐</div>
+        <h1>SAYNROZ</h1>
+        <div class="subtitle">Проекты. Моды. Твикеры. Браузер.</div>
+    </header>
+
+    <nav>
+        <a href="#projects">Проекты</a>
+        <a href="#about">Обо мне</a>
+        <a href="#links">Ссылки</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- ПРОЕКТЫ -->
+        <section id="projects">
+            <h2>Проекты</h2>
+            <div class="projects">
+
+                <!-- МОД -->
+                <div class="project">
+                    <div class="project-icon">🎮</div>
+                    <h3>ЛЮТЫЕ ПОЦЫ</h3>
+                    <p>Мод-пародия для S.T.A.L.K.E.R.: Зов Припяти. СНГ-треш, чёрный юмор, абсурд. 18+. Петрушка, семки, Жигуль, кириешки. Олег Пророк. Дегтярёв из будущего.</p>
+                    <div class="tags">
+                        <span class="tag">Сталкер</span>
+                        <span class="tag">18+</span>
+                        <span class="tag">Треш</span>
+                    </div>
+                    <a href="https://github.com/Saynroz/Lyutye-Potsy-mod-stalker-call-of-pripyat" target="_blank">GitHub →</a>
+                </div>
+
+                <!-- БРАУЗЕР -->
+                <div class="project">
+                    <div class="project-icon">🌐</div>
+                    <h3>SAYNROZ BROWSER</h3>
+                    <p>Геймерский браузер на Python (PyQt5). Chromium внутри. Тёмная тема, 8 цветов, смена поисковика, новости игр, загрузки, блокировка Яндекс/Edge. Красная кнопка «ИГРАТЬ».</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PyQt5</span>
+                        <span class="tag">Browser</span>
+                    </div>
+                    <a href="https://github.com/Saynroz" target="_blank">GitHub →</a>
+                </div>
+
+                <!-- ТВИКЕР -->
+                <div class="project">
+                    <div class="project-icon">⚙️</div>
+                    <h3>SAYNROZ TWEAKER</h3>
+                    <p>Твикер для Windows. Оптимизация системы, отключение телеметрии, настройка игр. Для тех, кто хочет выжать максимум из своего ПК.</p>
+                    <div class="tags">
+                        <span class="tag">Windows</span>
+                        <span class="tag">Твик</span>
+                        <span class="tag">Оптимизация</span>
+                    </div>
+                    <a href="https://github.com/Saynroz" target="_blank">GitHub →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ОБО МНЕ -->
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Я — SAYNROZ. Автор. Создатель. Лютый Поц. Легенда.</p>
+            <p>Делаю моды для Сталкера. Пишу браузеры на Python. Ковыряю Windows. Гоню семки. Наливаю Жигуль. Грызу кириешки. Сижу у костра.</p>
+            <p style="color: #e94560; font-weight: bold;">ЛЮТЫЕ ПОЦЫ НЕ УМИРАЮТ. ОНИ ПОХМЕЛЯЮТСЯ.</p>
+        </section>
+
+        <!-- ССЫЛКИ -->
+        <section id="links">
+            <h2>Ссылки</h2>
+            <div class="projects">
+                <div class="project">
+                    <div class="project-icon">🐙</div>
+                    <h3>GitHub</h3>
+                    <p>Исходники, проекты, релизы.</p>
+                    <a href="https://github.com/Saynroz" target="_blank">Открыть →</a>
+                </div>
+                <div class="project">
+                    <div class="project-icon">🦅</div>
+                    <h3>Falcon-Lair</h3>
+                    <p>Основная площадка для мода «Лютые Поцы».</p>
+                    <a href="https://falcon-lair.com/files/file/4252-stalker-zov-pripyatilyutye-pocy/" target="_blank">Открыть →</a>
+                </div>
+                <div class="project">
+                    <div class="project-icon">✈️</div>
+                    <h3>Telegram</h3>
+                    <p>Канал SAYNROZ. Новости, апдейты.</p>
+                    <a href="https://t.me/saynroz" target="_blank">Открыть →</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>SAYNROZ © 2026. Все права на оригинальные игры принадлежат их создателям.</p>
+        <div class="final">
+            ЮХУ. ТОВАРИЩ. ДЕГТЯРЁВ ИЗ БУДУЩЕГО. ПЕТРУШКА. ЧЕЛОВЕК ИЗ 1986. БЕЛАРУСКАЯ МОВА. ОЛЕГ ПРОРОК. РИП.
+        </div>
+    </footer>
+
+</body>
+</html>
